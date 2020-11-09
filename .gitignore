@@ -1,0 +1,12 @@
+public
+node_modules
+.publish
+.vscode
+.DS_Store
+/README.md
+/package.json
+/package-lock.json
+/gulpfile.js
+/app
+/app/assets
+/.browserslistrc
