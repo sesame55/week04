@@ -1,0 +1,39 @@
+$bgc-dark: #aa0601;
+$bgc-light: #aa06010d;
+// $bgc-black: #000000;
+$text-dark: #aa0601;
+
+// bg
+.bg-dark {
+    background-color: $bgc-dark;
+}
+.bg-light {
+    background-color: $bgc-light;
+}
+// .bg-black {
+//     background-color: $bgc-black;
+// }
+
+// text
+.text-white {
+    color: #fff;
+}
+.text-dark {
+    color: $text-dark;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+// 高寬
+.h-100 {
+    height: 100%;
+}
+
+// border
+.border-gray {
+    border: 1px solid #dee2e6;
+}

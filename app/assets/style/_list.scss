@@ -1,0 +1,237 @@
+// 專業
+.list_style_pro {
+    display: flex;
+    justify-content: space-around;
+    @include pad() {
+        flex-wrap: wrap;
+        padding: 0 11%;
+    }
+    .list_body {
+        width: 208px;
+        @include pad() {
+            margin-bottom: 40px;
+        }
+        @include phoneV() {
+            width: 237px;
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+        // .list_img,
+        img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 40px;
+            @include pad() {
+                margin-bottom: 1rem;
+            }
+        }
+        .list_text {
+            h5 {
+                font-size: 24px;
+                line-height: 36px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+// 經典
+.list_style_classic {
+    display: flex;
+    flex-direction: column;
+    .list_body {
+        display: flex;
+        @include pad() {
+            display: block;
+            position: relative;
+        }
+        // 圖片
+        .list_img {
+            display: block;
+            width: 60%;
+            text-align: center;
+            position: relative;
+            @include pad() {
+                width: 100%;
+            }
+        }
+        // 文字內容
+        .list_text {
+            display: flex;
+            align-self: center;
+            margin: 0 30px;
+            vertical-align: center;
+            @include pad() {
+                display: none;
+            }
+            .show-lg {
+                display: inline-block;
+                margin-right: 8px;
+                width: 48px;
+                @include tablet() {
+                    width: 32px;
+                }
+            }
+            p {
+                // display: inline-block;
+                font-size: 48px;
+                line-height: 72px;
+                font-weight: 900;
+                font-style: italic;
+                color: #aa0601;
+                @include tablet() {
+                    font-size: 28px;
+                    line-height: 42px;
+                }
+            }
+        }
+        // 包在圖片內
+        .list_text-sm {
+            display: none;
+            @include pad() {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                position: absolute;
+                top: 0%;
+                left: 50%;
+                transform: translate(-50%);
+                .show-sm {
+                    display: inline-block;
+                    width: 32px;
+                    margin-right: 8px;
+                }
+                p {
+                    color: #ffffff;
+                    font-size: 28px;
+                    line-height: 42px;
+                    font-weight: 900;
+                    font-style: italic;
+                }
+            }
+        }
+        // 相反排列
+        &.list_body-reverse {
+            flex-direction: row-reverse;
+            margin: 32px 0;
+            @include tablet() {
+                flex-direction: row;
+                margin: 8px 0;
+            }
+        }
+    }
+}
+
+// 聯名設計
+.list_style_design {
+    display: flex;
+    justify-content: space-between;
+    @include phoneH() {
+        flex-direction: column;
+    }
+    .list_body {
+        width: 50%;
+        height: 472px;
+        &:first-child {
+            margin-right: 30px;
+        }
+        @include pad() {
+            height: 280px;
+        }
+        @include phoneH() {
+            width: 100%;
+            &:first-child {
+                margin-bottom: 1rem;
+            }
+        }
+        .list_text {
+            background-color: #ffffff80;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                font-size: 72px;
+                line-height: 108px;
+                font-weight: bold;
+                color: #aa0601;
+                @include pad() {
+                    font-size: 32px;
+                    line-height: 45px;
+                }
+            }
+        }
+    }
+}
+
+// 顧客
+.list_style_customer {
+    display: flex;
+    justify-content: space-between;
+    @include pad() {
+        flex-wrap: wrap;
+    }
+    .list_body {
+        margin-right: 30px;
+        @include pad() {
+            margin-right: 0px;
+            width: 47%;
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                margin-bottom: 30px;
+            }
+        }
+        @include phoneH() {
+            width: 100%;
+            margin-bottom: 16px;
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                margin-bottom: 0px;
+            }
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+        &:last-child {
+            margin-right: 0px;
+        }
+        .list_img {
+            height: 256px;
+        }
+        .list_text {
+            font-family: 'Roboto';
+            font-weight: normal;
+            padding: 0 16px;
+            padding-top: 14px;
+            padding-bottom: 15px;
+            border: 1px solid #dee2e6;
+            @include phoneH() {
+                padding: 16px;
+            }
+            &_title {
+                color: #212529;
+                font-size: 14px;
+                line-height: 21px;
+                margin-bottom: 7px;
+            }
+            &_content {
+                color: #212529;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            &_footer {
+                color: #707070;
+                font-size: 14px;
+                line-height: 21px;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    @include pad() {
+        padding: 0 5%;
+    }
+    @include phoneV() {
+        padding: 0 15px;
+    }
+}

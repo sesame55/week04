@@ -1,0 +1,89 @@
+.form {
+    max-width: 730px;
+    margin: 0 auto;
+    @include pad() {
+        max-width: 450px;
+    }
+    @include phoneV() {
+        width: 100%;
+    }
+}
+.form_title {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    @include pad() {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+    @include phoneV() {
+        margin-bottom: 8px;
+    }
+}
+.form_group,
+.form_group_inline {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    @include pad() {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+    label {
+        margin-bottom: 4px;
+    }
+    input {
+        height: 50px;
+        border: 1px solid #000000;
+        background-color: transparent;
+        padding-left: 1rem;
+        @include pad() {
+            height: 36px;
+        }
+    }
+    textarea {
+        height: 136px;
+        border: 1px solid #000000;
+        background-color: transparent;
+        padding-left: 1rem;
+        padding-top: 14px;
+        @include pad() {
+            height: 100px;
+        }
+    }
+}
+.form_group_inline {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+    @include pad() {
+        align-items: flex-start;
+    }
+    input {
+        height: auto;
+        margin-right: 4px;
+    }
+}
+.form_button {
+    margin-top: 40px;
+    width: 350px;
+    padding: 16px;
+    background-color: #aa0601;
+    color: #ffffff;
+    @include pad() {
+        width: 210px;
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    @include phoneV() {
+        margin-top: 24px;
+    }
+    &:hover {
+        background-color: #650300;
+    }
+}

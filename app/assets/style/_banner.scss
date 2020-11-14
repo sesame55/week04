@@ -1,0 +1,80 @@
+// 最外圍
+.banner {
+    display: block;
+}
+
+// 大型
+.banner_lg {
+    height: 840px;
+    background: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include pad() {
+        background: url(../images/banner-sm.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    @include phoneV() {
+        height: 394px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        // background-size: contain;
+    }
+}
+
+// 文字位置
+.banner_body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include pad() {
+        padding: 0 39px;
+    }
+    @include phoneV() {
+        padding: 0 15px;
+    }
+}
+// 標題
+.banner_title {
+    font-size: 64px;
+    line-height: 96px;
+    font-weight: bold;
+    @include pad() {
+        font-size: 48px;
+        line-height: 72px;
+    }
+    @include phoneV() {
+        font-size: 32px;
+        line-height: 45px;
+    }
+}
+
+// 文字
+.banner_text {
+    font-size: 36px;
+    line-height: 54px;
+    @include pad() {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    @include phoneV() {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+.banner-sm{
+    width: 49.3%;
+    height: 309px;
+    @include pad() {
+        width: 50%;
+    }
+    @include phoneV() {
+        height: 144px;
+    }
+
+}

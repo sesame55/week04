@@ -1,0 +1,139 @@
+// nav
+// nav_logo
+// nav_list , list_item
+
+// 最外圍
+.nav {
+    display: flex;
+    padding: 0 4%;
+    @include phoneH() {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+}
+
+// logo
+.nav_logo {
+    display: inline-block;
+    @include phoneH() {
+        height: 50px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+// menu
+.nav_list {
+    display: flex;
+    margin-left: auto;
+    @include phoneH() {
+        flex-wrap: wrap;
+        margin: 0;
+        width: 100%;
+    }
+    .list_group {
+        @include phoneH() {
+            margin-left: 0px;
+            width: 50%;
+        }
+    }
+    .list_item {
+        display: block;
+        color: #fff;
+        padding: 40px 32px;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        white-space: nowrap;
+        @include pad() {
+            padding: 40px 20px;
+        }
+        @include phoneH() {
+            padding: 8px;
+            border: 1px solid #ffffff;
+        }
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+//mall
+.nav_mall {
+    max-width: 1400px;
+    margin: 0 auto;
+    @include pad() {
+        max-width: 100%;
+    }
+}
+.nav_mall .nav_list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .list_item {
+        flex: 1;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #dcdcdc;
+        border-bottom: 16px solid transparent;
+        opacity: 1;
+        @include tablet() {
+            border-bottom: 8px solid transparent;
+        }
+        @include pad() {
+            border-bottom: 4px solid transparent;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 0;
+            padding-bottom: 8px;
+            color: #000;
+            @include tablet() {
+                padding: 16px 0;
+                padding-bottom: 8px;
+            }
+            @include pad() {
+                padding: 8px 0;
+                padding-bottom: 4px;
+            }
+        }
+        span {
+            font-size: $fz * 4.2;
+            line-height: 1.5;
+            @include tablet() {
+                font-size: $fz * 2.8;
+                line-height: 1.5;
+            }
+            @include phoneH() {
+                font-size: $fz * 1.4;
+                line-height: $fz * 1.9;
+            }
+        }
+        img {
+            height: 48px;
+            margin-right: 8px;
+            @include tablet() {
+                height: 32px;
+            }
+            @include phoneH() {
+                height: 15px;
+            }
+        }
+        &:hover,
+        &.active {
+            border-bottom: 16px solid #aa0601;
+            @include tablet() {
+                border-bottom: 8px solid #aa0601;
+            }
+            @include phoneH() {
+                border-bottom: 4px solid #aa0601;
+            }
+        }
+    }
+}

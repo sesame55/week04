@@ -1,0 +1,545 @@
+.menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    min-height: 50px;
+    z-index: 1040;
+    &__bg {
+        background-color: $main-color;
+
+        box-shadow: 0 3px 12px rgba(0, 0, 0, .1);
+    }
+    &--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1040;
+        .menu__left {
+            // margin-left: 0;
+            transform: translateX(0);
+        }
+    }
+    &__container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    &__logo {
+        float: left;
+        margin: 0;
+        font-size: 0;
+        overflow: hidden;
+        &-link {
+            display: block;
+            margin-top: 11px;
+            margin-right: 4px;
+            line-height: 1;
+        }
+    }
+    // 左邊選單
+    &__left {
+        float: left;
+        margin-bottom: 0;
+        // margin-left: -109px;
+        background-color: $main-color;
+        transform: translateX(-109px);
+        transition: .2s linear;
+    }
+    // 右邊選單
+    &__right {
+        float: right;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        float: left;
+        position: relative;
+        &-link {
+            display: block;
+            padding: 0 12px;
+            height: 50px;
+            color: #fff;
+            font-weight: bold;
+            line-height: 50px;
+            &:focus,
+            &:hover {
+                color: #fff;
+                background-color: rgba(255, 255, 255, .2);
+            }
+            &--active {
+                color: #fff;
+                background-color: rgba(255, 255, 255, .2);
+            }
+            &--padding {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            
+        }
+        // 調整頭像跟即時通知間的間距
+        &--ml {
+            margin-left: 4px;
+        }
+        
+        // 發問、發文、站內簡訊、即時通知樣式
+        &-right-link {
+            display: block;
+            padding: 8px 10px;
+            margin-top: 9px;
+            margin-left: 4px;
+            font-weight: bold;
+            line-height: 1;
+            color: #fff;
+            border-radius: 4px;
+            transition: .1s ease;
+            &:focus,
+            &:hover {
+                color: #fff;
+                background-color: rgba(255, 255, 255, .2);
+            }
+            // 站內簡訊、即時通知間距調整
+            &--narrow {
+                padding: 8px;
+            }
+            // 站內簡訊、即時通知數字為0之狀態
+            &--zero {
+                color: #0f6b95;
+                &:focus,
+                &:hover {
+                    color: #0f6b95;
+                }
+            }
+        }
+    }
+
+    // 發文下拉選單
+    &__dropdown-menu {
+        right: -6px;
+        width: auto;
+        &>li>a {
+            padding: 4px 16px;
+        }
+    }
+
+    // 帳號下拉選單
+    &__profile-dropdown {
+        right: -5px;
+        left: inherit;
+        top: 46px;
+        width: 180px;
+        &>li>a {
+            text-align: left;
+        }
+        &-post {
+            cursor: pointer;
+        }
+        // 平板 發文按鈕下拉
+        &-ul {
+            display: none;
+            padding-left: 14px;
+            li+li {
+                margin-top: 4px;
+            }
+            &>li>a {
+                display: block;
+                padding: 4px 12px;
+                color: #797874;
+                border-radius: 4px;
+                &:hover {
+                    background-color: #e7f0f5;
+                }
+            }
+        }
+    }
+
+    // 站內簡訊、即時通知提示字
+    &__tooltip {
+        transition: .2s ease;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 19px;
+            left: 9px;
+            border: solid transparent;
+            height: 0;
+            width: 0;
+            border-bottom-color: #666;
+            border-width: 10px;
+            opacity: 0;
+            transition: opacity .5s ease , transform .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        &::after {
+            position: absolute;
+            left: -14px;
+            top: 36px;
+            padding: 4px 6px;
+            width: 66px;
+            font-weight: normal;
+            font-size: 13px;
+            color: #fff;
+            text-align: center;
+            background-color: #666;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity .5s ease, transform .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        &--msg {
+            &::after {
+                content: '站內簡訊';
+            }
+        }
+        &--notice {
+            &::after {
+                content: '即時通知';
+            }
+        }
+        &:focus,
+        &:hover {
+            &::before,
+            &::after {
+                opacity: 1;
+                transform: translateY(6px);
+            }
+        }
+    }
+
+    //頭像樣式
+    &__avatar {
+        float: left;
+        display: block;
+        margin-top: 8px;
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        border-radius: 100%;
+        &-img {
+            display: block;
+            width: 100%;
+        }
+        .notification__badge {
+            right: -8px;
+            top: 0;
+        }
+    }
+
+    //帳號樣式
+    &__account {
+        float: left;
+        display: block;
+        padding-left: 6px;
+        padding-right: 2px;
+        max-width: 100px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    //帳號旁邊的三角形
+    &__caret {
+        float: left;
+        position: relative;
+        top: 50%;
+        display: block;
+    }
+
+    //搜尋輸入框
+    &__search-input {
+        float: left;
+        margin-bottom: 16px;
+        width: 100%;
+        // height: 36px;
+        padding: 14px 12px;
+        font-size: 20px;
+        line-height: 1.42857143;
+        color: #fff;
+        background-color: transparent;
+        background-image: none;
+        border: none;
+        border-bottom: 1px solid #f6f6f6;
+        border-radius: 0;
+        transition: .15s ease-in-out;
+        &:focus {
+            // border-color: $main-color;
+            outline: none;
+        }
+    }
+
+    // 搜尋按鈕範圍
+    &__search-btn {
+        @include media("<=340px"){
+            display: none;
+        }
+        cursor: pointer;
+        width: 44px;
+        height: 50px;
+        .menu__search-toggle::before {
+            border-color: #fff;
+        }
+        .menu__search-toggle::after {
+            background-color: #fff;
+        }
+        &--active {
+            background-color: rgba(58, 58, 58, .96);
+        }
+    }
+    // 搜尋按鈕icon
+    &__search-toggle {
+        position: relative;
+        top: 18px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin: 0 auto;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            transition: 0.1s linear;
+        }
+        &::before {
+            left: -2px;
+            top: -2px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+        &::after {
+            height: 2px;
+            width: 7px;
+            top: 13px;
+            left: 10px;
+            background: #fff;
+            transform: rotate(45deg);
+        }
+        &.active {
+            &::before {
+                left: 7px;
+                top: 1px;
+                // left: 7px;
+                // top: 1px;
+                width: 0;
+                // border-width: 1px;
+                border: none;
+                border-left: 2px solid white;
+                border-radius: 0;
+                transform: rotate(45deg);
+            }
+            &::after {
+                width: 16px;
+                left: 0px;
+                top: 8px;
+            }
+        }
+    }
+    // 搜尋下拉樣式
+    &__dropform {
+        display: none;
+        position: relative;
+        // left: 0;
+        // top: 50px;
+        z-index: 999999;
+        width: 100%;
+        background-color: rgba(58, 58, 58, .96);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+        animation-name: fadeIn;
+        animation-duration: .3s;
+        form {
+            width: 90%;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+        &-btn {
+            margin-top: 10px;
+            margin-left: 16px;
+            padding: 10px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgba(58, 58, 58, .96);
+            background-color: #f6f6f6;
+            transition: .2s ease;
+            &:focus {
+                color: rgba(58, 58, 58, .96);
+                background-color: lighten(#f6f6f6,2%);
+                outline: none;
+            }
+            &:hover {
+                color: rgba(58, 58, 58, .96);
+                background-color: lighten(#f6f6f6,2%);
+            }
+            &:active {
+                color: rgba(67,67,67,.96);
+                background-color: darken(#f6f6f6,2%);
+                outline: none;
+            }
+        }
+        .pull-left {
+            width: 88%;
+        }
+        .radio-label {
+            margin-right: 30px;
+            margin-bottom: 0;
+            padding-left: 22px;
+            color: #fff;
+            &::before,
+            &::after {
+                top: 5px;
+                width: 16px;
+                height: 16px;
+            }
+            &::before {
+                background-color: transparent;
+                border: 2px solid #fff;
+                box-shadow: none;
+            }
+            &::after {
+                background-color: #fff;
+            }
+        }
+        .radio-input:checked+.radio-label {
+            font-weight: normal;
+        }
+        .radio-input:checked+.radio-label::after {
+            transform: scale(0.5, 0.5);
+        }
+    }
+    &__mask {
+        display: none;
+        background-color: rgba(0,0,0,.45);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        animation-name: fadeIn;
+        animation-duration: .3s;
+        &--open {
+            display: block;
+        }
+    }
+}
+
+.dropdown-badge {
+    position: static;
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: text-bottom;
+}
+
+.show-ask,
+.show-notice,
+.show-list-ask,
+.show-list-notice,
+.menu__avatar .notification__badge {
+    display: none;
+}
+
+@media (min-width: 1160px) {
+    .show-ask,
+    .show-notice {
+        display: block;
+    }
+    .menu {
+        &__container {
+            max-width: 1170px;
+        }
+    }
+    .header__inner {
+        max-width: 1170px;
+    }
+}
+
+//原本：min-width: 998px 鐵人賽：min-width: 1110px
+@media (min-width: 1110px) and (max-width: 1159px) {
+    .show-ask,
+    .show-list-notice,
+    .menu__avatar .notification__badge {
+        display: block;
+    }
+    .menu {
+        &__container {
+            width: 98%;
+        }
+    }
+    .header__inner {
+        width: 98%;
+    }
+}
+
+//原本：max-width: 997px 鐵人賽：max-width: 1109px
+@media (min-width: 856px) and (max-width: 1109px) {
+    .show-list-ask,
+    .show-list-notice,
+    .menu__avatar .notification__badge {
+        display: block;
+    }
+    .menu__account {
+        display: none;
+    }
+    .menu {
+        &__container {
+            width: 98%;
+        }
+    }
+    .header__inner {
+        width: 98%;
+    }
+}
+//原本：max-width: 855px 鐵人賽：max-width: 866px
+@media (max-width: 866px) {
+    .show-list-ask,
+    .show-list-notice,
+    .menu__avatar .notification__badge {
+        display: block;
+    }
+    .menu__account {
+        display: none;
+    }
+    .menu {
+        &__avatar {
+            margin-right: 8px;
+        }
+    }
+}
+
+//隱藏logo
+@media (max-width: 991px) {
+    .menu {
+        &__left {
+            transform: translateX(0);
+        }
+        &__logo {
+            display: none;
+        }
+    }
+}
+
+//搜尋的寬度
+@media (min-width: 768px) and (max-width: 1159px) {
+    .menu__dropform .pull-left {
+        width: 80%;
+    }
+}
+@media (max-width: 767px) {
+    .menu__dropform form {
+        padding: 30px 0 40px;
+    }
+    .menu__dropform .pull-left {
+        width: 100%;
+    }
+    .menu__dropform-btn {
+        margin-top: 16px;
+        margin-left: 0;
+    }
+}
+
+//搜尋的body遮罩
+.mask__patch {
+    overflow: hidden;
+}

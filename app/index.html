@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>首頁</title>
-        <link rel="stylesheet" href="./assets/style/all.css" />
-    </head>
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
 
-    <body>
-        <!-- nav -->
-        <header class="nav bg-dark">
-            <a href="index.html" class="nav_logo header_logo"></a>
-            <ul class="nav_list">
-                <li class="list_group">
-                    <a href="mall.html" class="list_item"> 系列鏡框 </a>
-                </li>
-                <li class="list_group">
-                    <a href="shop.html" class="list_item"> 門市據點 </a>
-                </li>
-                <li class="list_group">
-                    <a href="#" class="list_item"> 部落格 </a>
-                </li>
-                <li class="list_group">
-                    <a href="#" class="list_item"> 常見問題 </a>
-                </li>
-            </ul>
-        </header>
-
-        
 <!-- banner -->
 <section class="banner banner_lg">
     <div class="container banner_body text-dark text-right">
@@ -225,53 +201,3 @@
         </form>
     </div>
 </section>
-
-
-        <footer class="footer bg-dark text-white">
-            <div class="container">
-                <div class="footer_menu">
-                    <ul class="footer_menu-left">
-                        <li class="menu-item">首頁</li>
-                        <li class="menu-item">系列課程</li>
-                        <li class="menu-item">門市據點</li>
-                        <li class="menu-item">部落格</li>
-                        <li class="menu-item">常見問題</li>
-                    </ul>
-                    <ul class="footer_menu-right">
-                        <li class="menu-item"><img src="assets/images/icon-fb.svg" alt="" /></li>
-                        <li class="menu-item"><img src="assets/images/icon-ig.svg" alt="" /></li>
-                        <li class="menu-item"><img src="assets/images/icon-line.svg" alt="" /></li>
-                    </ul>
-                </div>
-                <ul class="footer_contact">
-                    <li class="menu-item">
-                        <img src="assets/images/icon-phone.svg" alt="" />
-                        <a href="tel:+0800000000">0800-000-000</a>
-                    </li>
-                    <li class="menu-item">
-                        <img src="assets/images/icon-mail.svg" alt="" />
-                        <a href="glasses@business.com">glasses@business.com</a>
-                    </li>
-                    <ul class="footer_menu-sm">
-                        <li class="menu-item"><img src="assets/images/icon-fb.svg" alt="" /></li>
-                        <li class="menu-item"><img src="assets/images/icon-ig.svg" alt="" /></li>
-                        <li class="menu-item"><img src="assets/images/icon-line.svg" alt="" /></li>
-                    </ul>
-                </ul>
-                <hr />
-                <ul class="footer_list">
-                    <li class="list-item-left">
-                        <img src="assets/images/logo.png" alt="" />
-                        <p>Copyright © 2020 Glasses.All rights reserved.</p>
-                    </li>
-                    <li class="list-item-right">
-                        <span>隱私權政策</span>
-                        <span>服務條款</span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        <script src="./assets/js/vendors.js"></script>
-        <script src="./assets/js/all.js"></script>
-    </body>
-</html>

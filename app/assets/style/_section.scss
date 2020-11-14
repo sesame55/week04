@@ -1,0 +1,83 @@
+.section {
+    padding-top: 64px;
+    padding-bottom: 80px;
+    @include pad() {
+        padding: 40px 0;
+    }
+    @include phoneV() {
+        padding: 32px 0;
+    }
+}
+.section-sm {
+    padding: 64px 0;
+    @include pad() {
+        padding: 40px 0;
+    }
+    @include phoneV() {
+        padding: 32px 0;
+    }
+}
+
+.section_body {
+    display: flex;
+    flex-direction: column;
+}
+
+// 標題
+.section_title {
+    font-size: 48px;
+    line-height: 72px;
+    margin-bottom: 60px;
+    @include pad() {
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 32px;
+    }
+    @include phoneV() {
+        font-size: 20px;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
+}
+.section_title-sm {
+    font-size: 48px;
+    line-height: 72px;
+    margin-bottom: 24px;
+    @include pad() {
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 16px;
+    }
+    @include phoneV() {
+        font-size: 20px;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
+}
+
+// mall
+.section_title-mall {
+    font-size: $fz * 4.2;
+    line-height: 1.5;
+    @include pad() {
+        font-size: $fz * 3.2;
+        line-height: 1.5;
+    }
+    @include phoneV() {
+        font-size: $fz *2;
+        line-height: 1.5;
+
+    }
+}
+.section_text-mall {
+    font-size: $fz * 3.2;
+    line-height: 1.5;
+    @include pad() {
+        font-size: $fz * 2.4;
+        line-height: 1.5;
+    }
+    @include phoneV() {
+        font-size: $fz *1.6;
+        line-height: 1.5;
+    }
+}

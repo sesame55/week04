@@ -1,0 +1,148 @@
+.footer {
+    padding: 40px 0;
+    @include phoneH() {
+        padding: 24px 0;
+    }
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: space-between;
+    @include phoneH() {
+        display: none;
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        .menu-item {
+            margin-right: 48px;
+            font-size: 16px;
+            line-height: 1.5;
+            @include pad() {
+                display: block;
+                // margin-right: 40px;
+                margin-right: 5%;
+                max-width: 64px;
+            }
+        }
+    }
+    &-right {
+        display: flex;
+        .menu-item {
+            margin-left: 32px;
+            @include pad() {
+                width: 24px;
+                margin-left: 24px;
+            }
+        }
+    }
+    &-sm {
+        display: none;
+        @include phoneH() {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .menu-item {
+            width: 24px;
+            margin-left: 24px;
+        }
+    }
+}
+
+.footer_contact {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    @include pad() {
+        margin-top: 24px;
+    }
+    @include phoneH() {
+        position: relative;
+    }
+    .menu-item {
+        display: flex;
+        margin-bottom: 16px;
+    }
+    .menu-item img {
+        height: 48px;
+        @include pad() {
+            height: 24px;
+        }
+        @include phoneH() {
+            height: 20px;
+        }
+    }
+    .menu-item a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 36px;
+        line-height: 3rem;
+        margin-left: 12px;
+        @include pad() {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @include phoneH() {
+            font-size: 16px;
+            margin-left: 4px;
+        }
+    }
+}
+
+.footer_list {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    @include phoneH() {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    .list-item-left {
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 38px;
+            @include pad() {
+                display: none;
+            }
+            @include phoneH() {
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                margin-right: 0;
+                width: 46px;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            @include phoneH() {
+                font-size: 14px;
+            }
+        }
+    }
+    .list-item-right {
+        margin-left: auto;
+        font-size: 14px;
+        line-height: 21px;
+        @include phoneH() {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0px;
+        }
+        span {
+            margin-left: 62px;
+            @include pad() {
+                margin-left: 24px;
+            }
+            @include phoneH() {
+                margin-left: 0px;
+                margin-top: 8px;
+            }
+        }
+    }
+}

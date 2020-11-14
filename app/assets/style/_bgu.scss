@@ -1,0 +1,89 @@
+// 經典
+.bg_product_1 {
+    background: url(../images/product-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg_product_2 {
+    background: url(../images/product-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg_product_3 {
+    background: url(../images/product-3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// 聯名設計
+.bg_design-bg {
+    background: url(../images/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg_design-1 {
+    background: url(../images/product-8.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg_design-2 {
+    background: url(../images/product-9.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// 顧客
+.bg_rec_1 {
+    background: url(../images/rec-1-lg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg_rec_2 {
+    background: url(../images/rec-2-lg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}.bg_rec_3 {
+    background: url(../images/rec-3-lg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}.bg_rec_4 {
+    background: url(../images/rec-4-lg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// mall
+.bg_banner-1{
+    background: url(../images/banner-1.png);
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include pad() {
+    background: url(../images/banner-1-sm.png);
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+}
+.bg_banner-2{
+    background: url(../images/banner-2.png);
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include pad() {
+            background: url(../images/banner-2-sm.png);
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+}
