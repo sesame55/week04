@@ -818,14 +818,6 @@ body {
   .product_sunglasses .product_text .product_price {
     color: #aa0601; }
 
-.pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
 .page-item {
   border: 1px solid #555555; }
 
