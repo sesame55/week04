@@ -1,60 +1,138 @@
-// $space: 1rem !default;
-// $spacer: (
-//     x0:     $space * 0,       //0
-//     x0_25:  $space * 0.25,    //4
-//     x0_5:   $space * 0.5,     //8
-//     x1:     $space,           //16
-//     x1_125: $space * 1.125,   //18
-//     x1_25:  $space * 1.25,    //20
-//     x1_5:   $space * 1.5,     //24
-//     x1_875: $space * 1.875,   //30
-//     x2:     $space * 2,       //32
-//     x2_25:  $space * 2.25,    //36
-//     x2_5:   $space * 2.5,     //40
-//     x3:     $space * 3,       //48
-//     x3_5:   $space * 3.5,     //56
+$space: 10px !default;
+$spacer: (
+    // 00這排都視為數字，前方的0只是為了排版，實際上只輸出後方數字
+    00: $space * 0,      //0
+    04: $space * 0.4,    //4
+    08: $space * 0.8,    //8
+    10: $space,          //10
+    16: $space * 1.6,    //16
+    20: $space * 2,      //20
+    24: $space * 2.4,    //24
+    30: $space * 3,      //30
+    32: $space * 3.2,    //32
+    36: $space * 3.6,    //36
+    40: $space * 4,      //40
+    48: $space * 4.8,    //48
+    56: $space * 5.6,    //56
+    104:$space * 10.4,    //104
+    128: $space * 12.8,   //128
+    144 :$space * 14.4     //144
+);
 
-// );
+@each $key, $value in $spacer {
+    // margin
+    .m-#{$key} {
+        margin: $value;
+    }
+    .mt-#{$key} {
+        margin-top: $value;
+    }
+    .ml-#{$key} {
+        margin-left: $value;
+    }
+    .mb-#{$key} {
+        margin-bottom: $value;
+    }
+    .mr-#{$key} {
+        margin-right: $value;
+    }
+    // padding
+    .p-#{$key} {
+        padding: $value;
+    }
+    .pt-#{$key} {
+        padding-top: $value;
+    }
+    .pl-#{$key} {
+        padding-left: $value;
+    }
+    .pb-#{$key} {
+        padding-bottom: $value;
+    }
+    .pr-#{$key} {
+        padding-right: $value;
+    }
+}
 
-// @each $key, $value in $spacer {
-//     // margin
-//     .m-#{$key} {
-//         margin: $value !important;
-//     }
-//     .mt-#{$key} {
-//         margin-top: $value !important;
-//     }
-//     .ml-#{$key} {
-//         margin-left: $value !important;
-//     }
-//     .mb-#{$key} {
-//         margin-bottom: $value !important;
-//     }
-//     .mr-#{$key} {
-//         margin-right: $value !important;
-//     }
-//     // padding
-//     .p-#{$key} {
-//         padding: $value !important;
-//     }
-//     .pt-#{$key} {
-//         padding-top: $value !important;
-//     }
-//     .pl-#{$key} {
-//         padding-left: $value !important;
-//     }
-//     .pb-#{$key} {
-//         padding-bottom: $value !important;
-//     }
-//     .pr-#{$key} {
-//         padding-right: $value !important;
-//     }
-// }
+@include pad() {
+    @each $key, $value in $spacer {
+        // margin
+        .m-md-#{$key/2} {
+            margin: $value/2;
+        }
+        .mt-md-#{$key/2} {
+            margin-top: $value/2;
+        }
+        .ml-md-#{$key/2} {
+            margin-left: $value/2;
+        }
+        .mb-md-#{$key/2} {
+            margin-bottom: $value/2;
+        }
+        .mr-md-#{$key/2} {
+            margin-right: $value/2;
+        }
+        // padding
+        .p-md-#{$key/2} {
+            padding: $value/2;
+        }
+        .pt-md-#{$key/2} {
+            padding-top: $value/2;
+        }
+        .pl-md-#{$key/2} {
+            padding-left: $value/2;
+        }
+        .pb-md-#{$key/2} {
+            padding-bottom: $value/2;
+        }
+        .pr-md-#{$key/2} {
+            padding-right: $value/2;
+        }
+    }
+}
+
+@include phoneH() {
+    @each $key, $value in $spacer {
+    // margin
+    .m-sm-#{$key/4} {
+        margin: $value/4;
+    }
+    .mt-sm-#{$key/4} {
+        margin-top: $value/4;
+    }
+    .ml-sm-#{$key/4} {
+        margin-left: $value/4;
+    }
+    .mb-sm-#{$key/4} {
+        margin-bottom: $value/4;
+    }
+    .mr-sm-#{$key/4} {
+        margin-right: $value/4;
+    }
+    // padding
+    .p-sm-#{$key/4} {
+        padding: $value/4;
+    }
+    .pt-sm-#{$key/4} {
+        padding-top: $value/4;
+    }
+    .pl-sm-#{$key/4} {
+        padding-left: $value/4;
+    }
+    .pb-sm-#{$key/4} {
+        padding-bottom: $value/4;
+    }
+    .pr-sm-#{$key/4} {
+        padding-right: $value/4;
+    }
+}
+}
+
 
 // auto
-.mr-auto{
+.mr-auto {
     margin-right: auto;
 }
-.ml-auto{
+.ml-auto {
     margin-left: auto;
 }

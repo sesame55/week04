@@ -2,7 +2,6 @@
 @import 'grid';
 @import 'font';
 
-
 // 頁首
 @import 'header';
 @import 'nav';
@@ -11,8 +10,10 @@
 // 內容
 @import 'container'; //中間區塊設定
 @import 'section';
-@import 'list';
-@import 'form';//表單
+@import 'list'; //首頁區塊
+@import 'form'; //表單
+@import 'product'; //系列
+@import 'pagination'; //分頁
 @import 'bgu'; //背景圖
 
 // 頁尾
