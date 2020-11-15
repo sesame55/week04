@@ -205,9 +205,6 @@ body {
         .nav_mall .nav_list .list_item:hover, .nav_mall .nav_list .list_item.active {
           border-bottom: 4px solid #aa0601; } }
 
-.banner {
-  display: block; }
-
 .banner_lg {
   height: 840px;
   background: url(../images/banner.png);
@@ -228,17 +225,7 @@ body {
       background-size: cover; } }
 
 .banner_body {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  height: 100%; }
   @media (max-width: 768px) {
     .banner_body {
       padding: 0 39px; } }
@@ -280,6 +267,36 @@ body {
   @media (max-width: 375px) {
     .banner-sm {
       height: 144px; } }
+
+.banner-md {
+  height: 304px;
+  background: url(../images/qa.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  @media (max-width: 568px) {
+    .banner-md {
+      height: 143px; } }
+  .banner-md .banner_title {
+    font-size: 64px;
+    line-height: 1.25; }
+    @media (max-width: 768px) {
+      .banner-md .banner_title {
+        font-size: 48px;
+        line-height: 1.25; } }
+    @media (max-width: 568px) {
+      .banner-md .banner_title {
+        font-size: 28px;
+        line-height: 1.5; } }
+  .banner-md .banner_img {
+    display: block;
+    width: 40px; }
+    @media (max-width: 768px) {
+      .banner-md .banner_img {
+        width: 30px; } }
+    @media (max-width: 568px) {
+      .banner-md .banner_img {
+        width: 16px; } }
 
 .container {
   max-width: 1110px;
@@ -2470,6 +2487,9 @@ body {
 .h-100 {
   height: 100%; }
 
+.w-100 {
+  width: 100%; }
+
 .border-gray {
   border: 1px solid #dee2e6; }
 
@@ -2488,6 +2508,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.justify-content-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
 .justify-content-end {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -2503,10 +2528,20 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.align-items-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
 .align-items-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.align-items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
 
 * {
   outline: 1px solid green; }
