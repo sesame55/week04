@@ -3,7 +3,7 @@ $color-dark: #5f3e2d;
 $color-light: #b75929;
 
 .product_optical {
-    > .product_item {
+    .product_item {
         width: calc((100% - 90px) / 4);
         @include pad() {
             width: calc((100% - 30px) / 2);
@@ -61,5 +61,52 @@ $color-light: #b75929;
     }
     &-light {
         background-color: $color-light;
+    }
+}
+
+.product_sunglasses {
+    .product_item {
+        width: calc((100% - 90px) / 3);
+        @include pad() {
+            width: calc((100% - 30px) / 2);
+        }
+        @include phoneH() {
+            width: 100%;
+        }
+    }
+    .product_img {
+        img {
+            width: 100%;
+            height: 224px;
+            @include pad() {
+                height: 164px;
+            }
+            @include phoneH() {
+                height: auto;
+            }
+        }
+    }
+    .product_text {
+        display: flex;
+        flex-direction: column;
+        @include pad() {
+            flex-direction: row;
+        }
+        .product_num,
+        .product_price {
+            font-size: $fz * 1.8;
+            line-height: 1.5;
+            @include pad() {
+                font-size: $fz * 2.4;
+                line-height: 1.25;
+            }
+            @include phoneH() {
+                font-size: $fz * 1.6;
+                line-height: 1.875;
+            }
+        }
+        .product_price {
+            color: $product_price-color;
+        }
     }
 }

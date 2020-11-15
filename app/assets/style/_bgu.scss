@@ -87,3 +87,27 @@
     background-repeat: no-repeat;
     }
 }
+.bg_banner-3{
+    background: url(../images/banner-3.png);
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include pad() {
+    background: url(../images/banner-3-sm.png);
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+}
+.bg_banner-4{
+    background: url(../images/product-2-color.png);
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include pad() {
+            background: url(../images/product-2-color-sm.png);
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+}
