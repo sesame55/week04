@@ -22,8 +22,11 @@ $spacer: (
     128: $space * 12.8,   //128
     144 :$space * 14.4,     //144
     168 :$space * 16.8,     //168
+    208 :$space * 20.8,     //208
     224 :$space * 22.4,     //224
     272: $space * 27.2,    //272
+    304: $space * 30.4,    //304
+
 );
 
 @each $key, $value in $spacer {

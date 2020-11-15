@@ -1,7 +1,7 @@
 .d-flex {
     display: flex;
 }
-.flex-wrap{
+.flex-wrap {
     flex-wrap: wrap;
 }
 .flex-column {
@@ -29,4 +29,10 @@
 }
 .align-items-end {
     align-items: flex-end;
+}
+
+@include pad() {
+    .flex-md-column {
+        flex-direction: column;
+    }
 }
