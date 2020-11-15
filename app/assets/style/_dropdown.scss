@@ -1,0 +1,15 @@
+$dropdown-color: #495057;
+
+.dropdown-title {
+    font-size: $fz * 1.6;
+    line-height: 1.5;
+}
+
+.dropdown-menu {
+    font-size: $fz * 1.6;
+    line-height: 1.5;
+    display: block;
+    padding: 12px 16px;
+    width: 237px;
+    color: $dropdown-color;
+}

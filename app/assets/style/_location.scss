@@ -1,0 +1,64 @@
+$btn-bgc: #000000;
+$btn-color: #ffffff;
+$text-color: #212529;
+
+.location-item {
+    width: calc((100% - 60px) / 3);
+    @include pad() {
+        width: calc((100% - 30px) / 2);
+    }
+    @include phoneH() {
+        width: 100%;
+    }
+}
+.location-body {
+    color: $text-color;
+}
+
+.location-title {
+    font-size: $fz * 2.4;
+    line-height: 1.5;
+    padding: 12px 24px;
+    border: 1px solid #00000020;
+    @include pad() {
+        font-size: $fz * 1.6;
+        line-height: 1.5;
+        padding: 8px 16px;
+    }
+}
+
+.location-text {
+    border: 1px solid #00000020;
+    padding: 16px 24px;
+    font-size: $fz * 2;
+    line-height: 1.5;
+    @include pad() {
+        padding: 16px;
+        font-size: $fz * 1.4;
+        line-height: 1.5;
+    }
+    img {
+        display: block;
+        width: 21px;
+        height: 21px;
+        @include pad() {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.location-btn {
+border: 1px solid #00000020;
+    width: 100%;
+    padding: 20px;
+    font-size: $fz * 2;
+    line-height: 1.3;
+    background-color: $btn-bgc;
+    color: $btn-color;
+    @include pad() {
+        padding: 16px;
+        font-size: $fz * 1.4;
+        line-height: 1.5;
+    }
+}
