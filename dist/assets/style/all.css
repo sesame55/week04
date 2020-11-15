@@ -975,6 +975,37 @@ body {
       font-size: 14px;
       line-height: 1.5; } }
 
+.qa-title {
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: bold; }
+  @media (max-width: 568px) {
+    .qa-title {
+      font-size: 20px;
+      line-height: 1.4; } }
+
+.qa-menu .item-title {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: bold; }
+  @media (max-width: 568px) {
+    .qa-menu .item-title {
+      font-size: 16px;
+      line-height: 1.5; } }
+
+.qa-menu .item-text {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 95px; }
+  @media (max-width: 768px) {
+    .qa-menu .item-text {
+      padding-left: 60px; } }
+  @media (max-width: 568px) {
+    .qa-menu .item-text {
+      font-size: 14px;
+      line-height: 1.5;
+      padding-left: 0px; } }
+
 .bg_product_1 {
   background: url(../images/product-1.png);
   background-size: cover;
@@ -1725,6 +1756,36 @@ body {
 .pr-80 {
   padding-right: 80px; }
 
+.m-96 {
+  margin: 96px; }
+
+.mt-96 {
+  margin-top: 96px; }
+
+.ml-96 {
+  margin-left: 96px; }
+
+.mb-96 {
+  margin-bottom: 96px; }
+
+.mr-96 {
+  margin-right: 96px; }
+
+.p-96 {
+  padding: 96px; }
+
+.pt-96 {
+  padding-top: 96px; }
+
+.pl-96 {
+  padding-left: 96px; }
+
+.pb-96 {
+  padding-bottom: 96px; }
+
+.pr-96 {
+  padding-right: 96px; }
+
 .m-104 {
   margin: 104px; }
 
@@ -2316,6 +2377,26 @@ body {
     padding-bottom: 40px; }
   .pr-md-40 {
     padding-right: 40px; }
+  .m-md-48 {
+    margin: 48px; }
+  .mt-md-48 {
+    margin-top: 48px; }
+  .ml-md-48 {
+    margin-left: 48px; }
+  .mb-md-48 {
+    margin-bottom: 48px; }
+  .mr-md-48 {
+    margin-right: 48px; }
+  .p-md-48 {
+    padding: 48px; }
+  .pt-md-48 {
+    padding-top: 48px; }
+  .pl-md-48 {
+    padding-left: 48px; }
+  .pb-md-48 {
+    padding-bottom: 48px; }
+  .pr-md-48 {
+    padding-right: 48px; }
   .m-md-52 {
     margin: 52px; }
   .mt-md-52 {
@@ -2818,6 +2899,26 @@ body {
     padding-bottom: 20px; }
   .pr-sm-20 {
     padding-right: 20px; }
+  .m-sm-24 {
+    margin: 24px; }
+  .mt-sm-24 {
+    margin-top: 24px; }
+  .ml-sm-24 {
+    margin-left: 24px; }
+  .mb-sm-24 {
+    margin-bottom: 24px; }
+  .mr-sm-24 {
+    margin-right: 24px; }
+  .p-sm-24 {
+    padding: 24px; }
+  .pt-sm-24 {
+    padding-top: 24px; }
+  .pl-sm-24 {
+    padding-left: 24px; }
+  .pb-sm-24 {
+    padding-bottom: 24px; }
+  .pr-sm-24 {
+    padding-right: 24px; }
   .m-sm-26 {
     margin: 26px; }
   .mt-sm-26 {

@@ -1,0 +1,35 @@
+.qa-title {
+    font-size: $fz * 3.2;
+    line-height: 1.4;
+    font-weight: bold;
+    @include phoneH() {
+        font-size: $fz * 2;
+        line-height: 1.4;
+    }
+}
+
+.qa-menu {
+    .item-title {
+        font-size: $fz * 2;
+        line-height: 1.4;
+        font-weight: bold;
+        @include phoneH() {
+            font-size: $fz * 1.6;
+            line-height: 1.5;
+        }
+    }
+    .item-text {
+        font-size: $fz * 1.6;
+        line-height: 1.5;
+        padding-left: 95px;
+        @include pad() {
+            padding-left: 60px;
+        }
+        @include phoneH() {
+            font-size: $fz * 1.4;
+            line-height: 1.5;
+        padding-left: 0px;
+        }
+        
+    }
+}
