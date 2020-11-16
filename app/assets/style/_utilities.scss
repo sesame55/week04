@@ -1,6 +1,6 @@
 $bgc-dark: #aa0601;
 $bgc-light: #aa06010d;
-// $bgc-black: #000000;
+$bgc-black: #650300;
 $text-dark: #aa0601;
 
 // bg
@@ -10,9 +10,9 @@ $text-dark: #aa0601;
 .bg-light {
     background-color: $bgc-light;
 }
-// .bg-black {
-//     background-color: $bgc-black;
-// }
+.bg-black {
+    background-color: $bgc-black;
+}
 
 // text
 .text-white {

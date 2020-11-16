@@ -1,0 +1,106 @@
+.blog-menu {
+    .menu-item {
+        display: block;
+        padding: 12px 24px 14px 24px;
+        text-decoration: none;
+        color: #fff;
+        font-size: $fz * 2;
+        line-height: 1.2;
+        @include pad() {
+            padding: 16px;
+            font-size: $fz * 1.6;
+            line-height: 1.5;
+        }
+    }
+}
+
+.blog-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.blog-img {
+    width: 55%;
+    img {
+        display: block;
+        width: 100%;
+    }
+    @include tablet() {
+        width: 40%;
+    }
+    @include pad() {
+        width: 50%;
+    }
+    @include phoneH() {
+        width: 100%;
+    }
+}
+
+.blog-content {
+    width: 40%;
+    @include tablet() {
+        width: 55%;
+    }
+    @include pad() {
+        width: 50%;
+    }
+    @include phoneH() {
+        width: 100%;
+    }
+}
+
+.blog-title {
+    font-size: $fz * 3.2;
+    line-height: 1.4;
+    color: #650300;
+    @include pad() {
+        font-size: $fz * 2;
+        line-height: 1.4;
+    }
+    @include phoneH() {
+        font-size: $fz * 1.6;
+        line-height: 1.4;
+    }
+}
+
+.blog-detail {
+    font-size: $fz * 2;
+    line-height: 1.5;
+    @include pad() {
+        font-size: $fz * 1.6;
+        line-height: 1.5;
+    }
+    @include phoneH() {
+        font-size: $fz * 1.4;
+        line-height: 1.5;
+    }
+}
+.blog-time {
+    font-size: $fz * 1.6;
+    line-height: 1.5;
+    @include pad() {
+        font-size: $fz * 1.4;
+        line-height: 1.5;
+    }
+}
+
+.blog-text {
+    font-size: $fz * 2;
+    line-height: 1.5;
+    color: #555555;
+    @include pad() {
+        font-size: $fz * 1.4;
+        line-height: 1.5;
+    }
+}
+
+.blog-btn {
+    display: block;
+    color: #650300;
+    font-size: $fz * 3.6;
+    line-height: 1.5;
+    font-weight: 900;
+    &-inline {
+        color: #555555;
+    }
+}

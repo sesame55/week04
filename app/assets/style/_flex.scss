@@ -31,8 +31,27 @@
     align-items: flex-end;
 }
 
+.d-none{
+    display: none;
+}
+
 @include pad() {
     .flex-md-column {
         flex-direction: column;
     }
+    .d-md-none {
+        display: none;
+    }
+    .d-md-inline{
+        display: inline;
+    }
+}
+
+@include phoneH() {
+    .d-sm-none {
+        display: none;
+    }
+    .flex-sm-column {
+    flex-direction: column;
+}
 }
