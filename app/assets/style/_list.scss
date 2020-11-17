@@ -2,6 +2,7 @@
 .list_style_pro {
     display: flex;
     justify-content: space-around;
+    // align-items:baseline;
     @include pad() {
         flex-wrap: wrap;
         padding: 0 11%;
@@ -27,7 +28,7 @@
             }
         }
         .list_text {
-            h5 {
+            h3 {
                 font-size: 24px;
                 line-height: 36px;
             }
