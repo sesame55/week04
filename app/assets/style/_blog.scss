@@ -1,3 +1,14 @@
+.blog {
+    position: relative;
+    @include pad() {
+        padding-bottom: 60px;
+    }
+    @include phoneH() {
+        padding-bottom: 0px;
+    }
+    
+}
+
 .blog-menu {
     @include phoneH() {
         width: 100%;
@@ -47,6 +58,13 @@
     @include phoneH() {
         width: 100%;
     }
+    &-lg {
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 .blog-content {
@@ -88,6 +106,10 @@
         font-size: $fz * 1.4;
         line-height: 1.5;
     }
+    &-lg {
+        font-size: $fz * 2.8;
+        line-height: 1.5;
+    }
 }
 .blog-time {
     font-size: $fz * 1.6;
@@ -106,6 +128,11 @@
         font-size: $fz * 1.4;
         line-height: 1.5;
     }
+    &-lg {
+        font-size: $fz * 2;
+        line-height: 1.5;
+        color: rgba(10, 10, 10, 0.6);
+    }
 }
 
 .blog-btn {
@@ -116,5 +143,108 @@
     font-weight: 900;
     &-inline {
         color: #555555;
+    }
+}
+
+.blog-menu-sm {
+    .menu-item {
+        display: block;
+        font-size: $fz * 1.6;
+        line-height: 1.5;
+        color: #000000;
+        padding: 0 4px;
+        &::after {
+            content: '/';
+            margin-left: 4px;
+        }
+        &.active {
+            color: #aa0601;
+            &::after {
+                content: '';
+            }
+        }
+    }
+}
+
+.blog-main {
+    width: 75%;
+    @include phoneH() {
+        width: 100%;
+    }
+}
+.blog-tag {
+    width: 20%;
+    @include phoneH() {
+        width: 100%;
+    }
+}
+
+//------
+.share {
+    &-title {
+        font-size: $fz * 2;
+        line-height: 1.5;
+        color: #0a0a0a;
+        font-weight: bold;
+        @include pad() {
+            font-size: $fz * 1.6;
+            line-height: 1.5;
+        }
+    }
+    &-item {
+        display: block;
+        width: 24px;
+        height: 24px;
+        @include pad() {
+            width: 20px;
+            height: 20px;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+//--------
+.changPage {
+    padding-top: 20px;
+    border-top: 1px solid #707070;
+    @include pad() {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 5%;
+        padding-top: 15px;
+    }
+    @include phoneH() {
+        position: relative;
+        padding: 0;
+        padding-top: 10px;
+    }
+    .changPage-item {
+        font-size: $fz * 2;
+        line-height: 1.5;
+        color: #000000;
+        display: flex;
+        @include pad() {
+            font-size: $fz * 1.6;
+            line-height: 1.5;
+        }
+        @include phoneH() {
+            font-size: $fz * 1.4;
+            line-height: 1.5;
+        }
+    }
+    .changPage-img {
+        display: block;
+        width: 24px;
+        @include pad() {
+            width: 20px;
+        }
+        @include phoneH() {
+            width: 16px;
+        }
     }
 }

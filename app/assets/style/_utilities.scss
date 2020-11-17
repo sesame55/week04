@@ -2,6 +2,8 @@ $bgc-dark: #aa0601;
 $bgc-light: #aa06010d;
 $bgc-black: #650300;
 $text-dark: #aa0601;
+$color-dark: #aa0601;
+
 
 // bg
 .bg-dark {
@@ -39,4 +41,25 @@ $text-dark: #aa0601;
 // border
 .border-gray {
     border: 1px solid #dee2e6;
+}
+
+// color
+.color-dark{
+    color:$color-dark;
+}
+.color-black{
+    color:#000000;
+}
+.color-gray{
+    color:#6C6C6C;
+}
+
+// font
+.fz-16{
+    font-size: $fz * 1.6;
+}
+@include phoneH() {
+    .fz-sm-16{
+    font-size: $fz * 1.6;
+    }
 }

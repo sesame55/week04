@@ -1,0 +1,35 @@
+.tag {
+    display: block;
+    color: #aa0601;
+    font-size: $fz * 2.4;
+    line-height: 1.5;
+    font-weight: bold;
+    @include pad() {
+        font-size: $fz * 1.6;
+        line-height: 1.5;
+    }
+    @include phoneH() {
+        font-size: $fz * 1.4;
+        line-height: 1.5;
+    }
+}
+
+.tag-img {
+    width: 48px;
+    height: 48px;
+    @include pad() {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.tag-title {
+    font-size: $fz * 2.8;
+    line-height: 1.5;
+    color: #aa0601;
+    font-weight: bold;
+    @include pad() {
+        font-size: $fz * 2;
+        line-height: 1.5;
+    }
+}
